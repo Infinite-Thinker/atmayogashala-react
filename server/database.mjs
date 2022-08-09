@@ -59,7 +59,7 @@ class Database {
                 if (! this.flag) {
                     console.log("\n-------Serious Error !-------\n")
                     // throw error
-                } else console.log("colection already exists, chill")
+                } else console.log("collection already exists, chill")
             }
         })
     }

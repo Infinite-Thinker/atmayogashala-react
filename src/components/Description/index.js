@@ -85,34 +85,34 @@ export default function RecipeReviewCard(props) {
           <div
               style={{
                   display: "flex",
-                  flexDirection: "row",
-                  flexWrap: "nowrap",
-                  justifyContent: "center",
-                  alignItems: "Stretch",
-                  alignContent: "center",
+                //   flexFLow: "row nowrap",
+                  placeContent: "center",
+                  flexWrap: "wrap",
+                  alignItems: "flex-start",
+                  justifyContent: "space-evenly",
+                //   flexDirection: "row",
+
               }}
           >
               <CardMedia
                   component="img"
                   height="380"
-                  // width = "400"
                   image={props.info.photo || photo}
                   alt="Fit yogi"
                   style={{
                       margin: "10px",
-                      width: "60%",
+                      width: "500px",
                       maxHeight: "fit-content",
                   }}
               />
-              <CardContent
-                  style={{
-                      width: "40%",
-                  }}
-              >
-                  <Typography variant="body2" color="text.secondary" fontSize={"20px"}>
-                      {props.info.description1}
-                  </Typography>
-              </CardContent>
+                <Typography variant="body2" color="text.secondary" style={{
+                    fontSize: 20,
+                    float: "right",
+                    // width: "40%",
+                    margin: 10,
+                }}>
+                    {props.info.description1}
+                </Typography>
           </div>
 
           <CardActions disableSpacing style={{ justifyContent: "space around", marginLeft: 5 }}>
@@ -125,15 +125,17 @@ export default function RecipeReviewCard(props) {
                   <span className="material-icons">share</span>
               </IconButton>
           </CardActions>
+              <Typography style={{ alignSelf: "center", textAlign: "center", fontSize: 18, fontWeight: 700 }}>{props.info.tagline}</Typography>
           <CardContent>
               <Typography style={{ fontSize: 20, fontWeight: "bold" }}>Description: </Typography>
-
-              <div
+            <br></br>
+              <div className='Description_section'
                   style={{
                       display: "flex",
                       flexDirection: "row",
                       alignItems: "center",
                       justifyContent: "space-between",
+                      margin: 20,
                   }}
               >
                   <Typography component="div" style={{ fontSize: 15, fontWeight: 700 }}>
@@ -188,7 +190,6 @@ export default function RecipeReviewCard(props) {
                   </Typography>
               </div>
 
-              <Typography style={{ alignSelf: "center", textAlign: "center", fontSize: 18, fontWeight: 700 }}>{props.info.tagline}</Typography>
           </CardContent>
 
           <CardActions style={{ justifyContent: "center", paddingRight: 20, paddingBottom: 15 }}>
