@@ -14,6 +14,7 @@ import Snack from "./components/Snack"
 import Loader from "./components/Loader"
 import Footer from "./components/Footer/index.js"
 import Prod_description from "./pages/Prod_description"
+import NewHome from "./pages/NewHome"
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
                     <Toolbar></Toolbar>
                     <Routes>
                         <Route exact path="/" element={<Home />} />
+                        <Route exact path="/home" element={<NewHome/>} />
                         <Route exact path="/admin_dashboard/*" element={<AdminDashboard />} />
                         <Route exact path="/prod" element={<Products setSignin={{ setLoggedIn, loggedIn }} />} />
                         <Route exact path="/but" element={<Button variant="contained">But</Button>} />
